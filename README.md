@@ -18,7 +18,7 @@
 * Backend sync
 
 # Architecture
-### Data Storage
+### High Level
 ![Архитектура](https://user-images.githubusercontent.com/29783574/172618324-839f967f-18b7-46d1-abdf-c901d95b7f2b.jpg)
 ### Presentation Layer
 ![Архитектура (2)](https://user-images.githubusercontent.com/29783574/172618605-ccf8ffbf-2888-424e-a642-f4341c06359e.jpg)
