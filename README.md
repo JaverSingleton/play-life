@@ -18,4 +18,9 @@
 * Backend sync
 
 # Architecture
-TODO
+### Data Storage
+![Архитектура](https://user-images.githubusercontent.com/29783574/172618324-839f967f-18b7-46d1-abdf-c901d95b7f2b.jpg)
+### Presentation Layer
+![Архитектура (2)](https://user-images.githubusercontent.com/29783574/172618605-ccf8ffbf-2888-424e-a642-f4341c06359e.jpg)
+### Gradle Modules
+![Архитектура (1)](https://user-images.githubusercontent.com/29783574/172618482-c99e9829-ceb5-4f96-87a7-61c8412a16a2.jpg)
