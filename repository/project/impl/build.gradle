@@ -1,0 +1,11 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+dependencies {
+    implementation project(path: ':repository:project:api')
+    implementation project(path: ':db:project')
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+}

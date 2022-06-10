@@ -14,3 +14,11 @@ dependencyResolutionManagement {
 }
 rootProject.name = "play-life"
 include ':app'
+include ':repository:note:impl'
+include ':repository:note:api'
+include ':repository:project:impl'
+include ':repository:project:api'
+include ':db:core'
+include ':db:note'
+include ':db:project'
+include ':db:score'
