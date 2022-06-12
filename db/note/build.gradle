@@ -4,5 +4,11 @@ plugins {
 }
 
 dependencies {
+    api project(path: ':db:score')
+
+    // TODO Вынести в общий каталог версий
+    def room_version = "2.4.2"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
     implementation 'androidx.core:core-ktx:1.7.0'
 }
