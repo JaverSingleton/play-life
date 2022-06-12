@@ -5,7 +5,7 @@ plugins {
 
 dependencies {
     implementation project(path: ':repository:project:api')
-    implementation project(path: ':db:project')
+    implementation project(path: ':db')
 
     implementation 'androidx.core:core-ktx:1.7.0'
 }

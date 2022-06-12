@@ -1,7 +1,6 @@
-package ru.javersingleton.play_life.db.note
+package ru.javersingleton.play_life.db.entity
 
 import androidx.room.*
-import ru.javersingleton.play_life.db.score.ScoreEntity
 
 data class NoteWithScoresEntity(
     @Embedded val note: NoteEntity,
@@ -9,5 +8,5 @@ data class NoteWithScoresEntity(
         parentColumn = "id",
         entityColumn = "noteId"
     )
-    val scores: List<ScoreEntity>
+    val scores: List<ScoreWithProjectEntity>
 )

@@ -5,8 +5,7 @@ plugins {
 
 dependencies {
     implementation project(path: ':repository:note:api')
-    implementation project(path: ':db:note')
-    implementation project(path: ':db:score')
+    implementation project(path: ':db')
 
     implementation 'androidx.core:core-ktx:1.7.0'
 }
