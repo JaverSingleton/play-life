@@ -5,12 +5,15 @@ import androidx.room.RoomDatabase
 import ru.javersingleton.play_life.db.dao.NoteDao
 import ru.javersingleton.play_life.db.dao.ProjectDao
 import ru.javersingleton.play_life.db.dao.ScoreDao
+import ru.javersingleton.play_life.db.entity.NoteEntity
+import ru.javersingleton.play_life.db.entity.ProjectEntity
+import ru.javersingleton.play_life.db.entity.ScoreEntity
 
 @Database(
     entities = [
-        NoteDao::class,
-        ProjectDao::class,
-        ScoreDao::class,
+        NoteEntity::class,
+        ProjectEntity::class,
+        ScoreEntity::class,
     ],
     version = 1
 )

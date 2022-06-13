@@ -9,9 +9,9 @@ interface ProjectDao {
     @Query("SELECT * FROM project")
     fun getProjects(): List<ProjectEntity>
 
-    @Query("SELECT * FROM project WHERE id = :projectId")
-    @Transaction
-    fun getProjectWithScores(projectId: Long): ProjectWithScoresEntity
+//    @Query("SELECT * FROM project WHERE id = :projectId")
+//    @Transaction
+//    fun getProjectWithScores(projectId: Long): ProjectWithScoresEntity
 
     @Insert
     fun insertProject(project: ProjectEntity)

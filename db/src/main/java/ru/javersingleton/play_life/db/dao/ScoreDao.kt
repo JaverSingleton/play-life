@@ -8,12 +8,12 @@ import ru.javersingleton.play_life.db.entity.ScoreEntity
 
 @Dao
 interface ScoreDao {
-    @Query("SELECT * FROM score WHERE projectId = :projectId")
-    fun getProjectScores(projectId: Long): List<ScoreEntity>
+//    @Query("SELECT * FROM score WHERE projectId = :projectId")
+//    fun getProjectScores(projectId: Long): List<ScoreEntity>
 
     @Insert
     fun insertScores(vararg score: ScoreEntity)
 
-    @Delete
-    fun deleteScores(vararg score: ScoreEntity)
+//    @Delete
+//    fun deleteScores(vararg score: ScoreEntity)
 }
