@@ -1,4 +1,4 @@
-package ru.javersingleton.play_life
+package ru.javersingleton.play_life.screen.main
 
 import android.os.Bundle
 import android.widget.TextView

@@ -19,5 +19,6 @@ include(
     ":repository:note:impl",
     ":repository:project:api",
     ":repository:project:impl",
+    ":screen:main",
     ":db"
 )
