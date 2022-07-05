@@ -6,9 +6,9 @@ import ru.javersingleton.play_life.db.entity.NoteWithScoresEntity
 
 @Dao
 interface NoteDao {
-//    @Query("SELECT * FROM note")
-//    @Transaction
-//    fun getNotesWithScores(): List<NoteWithScoresEntity>
+    @Query("SELECT * FROM note")
+    @Transaction
+    fun getNotesWithScores(): List<NoteEntity>
 
     @Insert
     fun insertNote(note: NoteEntity)

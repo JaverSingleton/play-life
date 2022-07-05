@@ -15,7 +15,7 @@ import ru.javersingleton.play_life.db.entity.ScoreEntity
         ProjectEntity::class,
         ScoreEntity::class,
     ],
-    version = 1
+    version = 2
 )
 abstract class Database : RoomDatabase() {
     abstract fun noteDao(): NoteDao

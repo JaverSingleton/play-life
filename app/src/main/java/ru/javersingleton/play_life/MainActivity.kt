@@ -19,9 +19,13 @@ class MainActivity : AppCompatActivity() {
             applicationContext,
             Database::class.java,
             "database"
-        ).build()
+        ).allowMainThreadQueries()
+            .fallbackToDestructiveMigration()
+            .build()
 
         db.noteDao().insertNote(NoteEntity(message = "Test"))
-//        titleView.text = db.noteDao().getNotesWithScores().map { it.note.message }.joinToString { ", " }
+        val notes = db.noteDao()
+            .getNotesWithScores()
+        titleView.text = notes.map { it.message }.joinToString(", ")
     }
 }
