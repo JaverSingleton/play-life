@@ -19,12 +19,6 @@ open class App : Application(), HasDependencies {
 
         DaggerAppComponent.builder()
             .application(this)
-            .noteDatabase(
-                RoomDatabaseImpl.Builder()
-                    .name("database")
-                    .applicationContext(this)
-                    .build()
-            )
             .build()
             .inject(this)
 

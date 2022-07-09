@@ -1,6 +1,6 @@
 package ru.javersingleton.play_life.db.di
 
-import android.content.Context
+import android.app.Application
 import androidx.room.Room
 import dagger.Module
 import dagger.Provides
@@ -17,13 +17,12 @@ object DatabaseModule {
     @Provides
     @Reusable
     fun provideDatabase(
-        name: String,
-        applicationContext: Context
+        config: Config
     ): Database =
         Room.databaseBuilder(
-            applicationContext,
+            config.application,
             RoomDatabaseImpl::class.java,
-            name
+            config.name
         ).allowMainThreadQueries()
             .fallbackToDestructiveMigration()
             .build()
@@ -39,5 +38,10 @@ object DatabaseModule {
     @Provides
     @Reusable
     fun provideScoreDao(db: Database): ScoreDao = db.scoreDao()
+
+    interface Config {
+        val name: String
+        val application: Application
+    }
 
 }

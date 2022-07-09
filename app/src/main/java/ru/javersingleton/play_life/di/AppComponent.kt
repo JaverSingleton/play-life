@@ -13,17 +13,13 @@ import javax.inject.Singleton
     modules = [
         AppModule::class,
         DependenciesModule::class,
-    ],
-    dependencies = [Database::class]
+    ]
 )
 interface AppComponent :
-    MainDependencies,
-    Database {
+    MainDependencies {
 
     @Component.Builder
     interface Builder {
-
-        fun noteDatabase(noteDatabase: Database): Builder
 
         @BindsInstance
         fun application(application: Application): Builder
