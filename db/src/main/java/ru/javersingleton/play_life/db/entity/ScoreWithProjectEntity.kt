@@ -4,10 +4,10 @@ import androidx.room.Embedded
 import androidx.room.Relation
 
 data class ScoreWithProjectEntity(
-    @Embedded val note: ScoreEntity,
+    @Embedded val note: ScoreDto,
     @Relation(
         parentColumn = "id",
         entityColumn = "projectId"
     )
-    val project: ProjectEntity
+    val project: ProjectDto
 )
