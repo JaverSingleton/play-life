@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import ru.javersingleton.play_life.db.dao.NoteDao
-import ru.javersingleton.play_life.db.entity.NoteDto
+import ru.javersingleton.play_life.db.dto.NoteDto
 import ru.javersingleton.play_life.di.findDependencies
 import ru.javersingleton.play_life.screen.main.di.DaggerMainComponent
 import javax.inject.Inject

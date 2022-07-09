@@ -1,4 +1,4 @@
-package ru.javersingleton.play_life.db.entity
+package ru.javersingleton.play_life.db.dto
 
 import androidx.room.Embedded
 import androidx.room.Relation

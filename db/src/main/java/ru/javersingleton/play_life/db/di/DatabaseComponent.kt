@@ -3,10 +3,10 @@ package ru.javersingleton.play_life.db.di
 import android.content.Context
 import dagger.BindsInstance
 import dagger.Component
-import ru.javersingleton.play_life.db.NoteDatabase
+import ru.javersingleton.play_life.db.Database
 
 @Component(modules = [DatabaseModule::class])
-interface DatabaseComponent: NoteDatabase {
+interface DatabaseComponent: Database {
 
     @Component.Builder
     interface Builder {

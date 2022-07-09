@@ -5,8 +5,8 @@ import androidx.room.Room
 import dagger.Module
 import dagger.Provides
 import dagger.Reusable
-import ru.javersingleton.play_life.db.NoteDatabase
-import ru.javersingleton.play_life.db.RoomNoteDatabase
+import ru.javersingleton.play_life.db.Database
+import ru.javersingleton.play_life.db.RoomDatabaseImpl
 import ru.javersingleton.play_life.db.dao.NoteDao
 import ru.javersingleton.play_life.db.dao.ProjectDao
 import ru.javersingleton.play_life.db.dao.ScoreDao
@@ -19,10 +19,10 @@ object DatabaseModule {
     fun provideDatabase(
         name: String,
         applicationContext: Context
-    ): NoteDatabase =
+    ): Database =
         Room.databaseBuilder(
             applicationContext,
-            RoomNoteDatabase::class.java,
+            RoomDatabaseImpl::class.java,
             name
         ).allowMainThreadQueries()
             .fallbackToDestructiveMigration()
@@ -30,14 +30,14 @@ object DatabaseModule {
 
     @Provides
     @Reusable
-    fun provideNoteDao(db: NoteDatabase): NoteDao = db.noteDao()
+    fun provideNoteDao(db: Database): NoteDao = db.noteDao()
 
     @Provides
     @Reusable
-    fun provideProjectDao(db: NoteDatabase): ProjectDao = db.projectDao()
+    fun provideProjectDao(db: Database): ProjectDao = db.projectDao()
 
     @Provides
     @Reusable
-    fun provideScoreDao(db: NoteDatabase): ScoreDao = db.scoreDao()
+    fun provideScoreDao(db: Database): ScoreDao = db.scoreDao()
 
 }

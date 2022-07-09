@@ -4,7 +4,7 @@ import android.app.Application
 import dagger.BindsInstance
 import dagger.Component
 import ru.javersingleton.play_life.App
-import ru.javersingleton.play_life.db.NoteDatabase
+import ru.javersingleton.play_life.db.Database
 import ru.javersingleton.play_life.screen.main.di.MainDependencies
 import javax.inject.Singleton
 
@@ -14,16 +14,16 @@ import javax.inject.Singleton
         AppModule::class,
         DependenciesModule::class,
     ],
-    dependencies = [NoteDatabase::class]
+    dependencies = [Database::class]
 )
 interface AppComponent :
     MainDependencies,
-    NoteDatabase {
+    Database {
 
     @Component.Builder
     interface Builder {
 
-        fun noteDatabase(noteDatabase: NoteDatabase): Builder
+        fun noteDatabase(noteDatabase: Database): Builder
 
         @BindsInstance
         fun application(application: Application): Builder
