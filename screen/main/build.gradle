@@ -6,6 +6,13 @@ plugins {
 
 android {
     compileSdk 32
+
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion libs.versions.compose.get()
+    }
 }
 
 dependencies {
@@ -21,4 +28,7 @@ dependencies {
     implementation libs.appCompat
     implementation libs.material
     implementation libs.constraintLayout
+
+    implementation libs.bundles.compose
+    implementation libs.activity.compose
 }

@@ -1,8 +1,10 @@
 package ru.javersingleton.play_life.screen.main
 
 import android.os.Bundle
-import android.widget.TextView
+import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.material.Text
+import androidx.compose.runtime.remember
 import ru.javersingleton.play_life.db.dao.NoteDao
 import ru.javersingleton.play_life.db.dto.NoteDto
 import ru.javersingleton.play_life.di.findDependencies
@@ -15,22 +17,22 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var noteDao: NoteDao
 
-    private lateinit var titleView: TextView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
         DaggerMainComponent.builder()
             .withDependencies(findDependencies())
             .build()
             .inject(this)
-
-        titleView = findViewById(R.id.title)
-
-        noteDao.insertNote(NoteDto(message = "Test"))
-        val notes = noteDao
-            .getNotesWithScores()
-        titleView.text = notes.map { it.message }.joinToString(", ")
+        setContent {
+            val text: String = remember {
+                noteDao.insertNote(NoteDto(message = "Test"))
+                val notes = noteDao
+                    .getNotesWithScores()
+                notes.map { it.message }.joinToString(", ")
+            }
+            Text(
+                text = text
+            )
+        }
     }
 }
