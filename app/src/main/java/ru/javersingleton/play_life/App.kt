@@ -1,7 +1,6 @@
 package ru.javersingleton.play_life
 
 import android.app.Application
-import ru.javersingleton.play_life.db.RoomDatabaseImpl
 import ru.javersingleton.play_life.di.DaggerAppComponent
 import ru.javersingleton.play_life.di.Dependencies
 import ru.javersingleton.play_life.di.HasDependencies
