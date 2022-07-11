@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.javersingleton.play_life.screen.project">
+
+    <application>
+        <activity
+            android:name=".ProjectActivity"
+            android:exported="false"/>
+    </application>
+</manifest>

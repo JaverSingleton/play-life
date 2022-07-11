@@ -1,6 +1,7 @@
 plugins {
     alias libs.plugins.android.library
     alias libs.plugins.kotlin.android
+    alias libs.plugins.kotlin.kapt
 }
 
 android {
@@ -8,5 +9,12 @@ android {
 }
 
 dependencies {
-    implementation project(path: ':repository:project:api')
+    api project(path: ':repository:project:api')
+    implementation project(path: ':db')
+
+    implementation libs.coroutines
+
+    implementation libs.dagger
+    kapt libs.dagger.compiler
+
 }

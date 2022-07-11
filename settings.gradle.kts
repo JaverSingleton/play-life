@@ -20,6 +20,7 @@ include(
     ":repository:project:api",
     ":repository:project:impl",
     ":screen:main",
+    ":screen:project",
     ":di",
     ":db"
 )

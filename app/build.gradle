@@ -17,6 +17,10 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures {
+        buildConfig = true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -34,6 +38,8 @@ android {
 
 dependencies {
     implementation project(path: ':screen:main')
+    implementation project(path: ':screen:project')
+    implementation project(path: ':repository:project:impl')
     implementation project(path: ':di')
     implementation project(path: ':db')
 

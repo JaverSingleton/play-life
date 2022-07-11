@@ -1,0 +1,31 @@
+plugins {
+    alias libs.plugins.android.library
+    alias libs.plugins.kotlin.android
+    alias libs.plugins.kotlin.kapt
+}
+
+android {
+    compileSdk 32
+
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion libs.versions.compose.get()
+    }
+}
+
+dependencies {
+    implementation project(path: ':repository:note:api')
+    implementation project(path: ':di')
+
+    implementation libs.dagger
+    kapt libs.dagger.compiler
+
+    implementation libs.appCompat
+    implementation libs.material
+    implementation libs.constraintLayout
+
+    implementation libs.bundles.compose
+    implementation libs.activity.compose
+}
