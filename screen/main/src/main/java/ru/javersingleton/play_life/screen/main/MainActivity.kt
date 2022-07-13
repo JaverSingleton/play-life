@@ -5,14 +5,9 @@ import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.material.Text
 import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.remember
-import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.onEach
-import kotlinx.coroutines.flow.subscribe
 import ru.javersingleton.play_life.db.dao.NoteDao
-import ru.javersingleton.play_life.db.dto.NoteDto
-import ru.javersingleton.play_life.di.findDependencies
+import ru.javersingleton.play_life.core.di.findDependencies
 import ru.javersingleton.play_life.screen.main.di.DaggerMainComponent
 import javax.inject.Inject
 

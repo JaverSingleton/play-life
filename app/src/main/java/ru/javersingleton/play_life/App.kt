@@ -1,9 +1,9 @@
 package ru.javersingleton.play_life
 
 import android.app.Application
-import ru.javersingleton.play_life.di.DaggerAppComponent
-import ru.javersingleton.play_life.di.Dependencies
-import ru.javersingleton.play_life.di.HasDependencies
+import ru.javersingleton.play_life.core.di.DaggerAppComponent
+import ru.javersingleton.play_life.core.di.Dependencies
+import ru.javersingleton.play_life.core.di.HasDependencies
 import javax.inject.Inject
 
 open class App : Application(), HasDependencies {

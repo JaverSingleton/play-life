@@ -17,7 +17,8 @@ android {
 
 dependencies {
     implementation project(path: ':repository:note:api')
-    implementation project(path: ':di')
+    implementation project(path: ':core:di')
+    implementation project(path: ':core:coroutines')
 
     implementation libs.dagger
     kapt libs.dagger.compiler

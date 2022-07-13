@@ -19,8 +19,10 @@ include(
     ":repository:note:impl",
     ":repository:project:api",
     ":repository:project:impl",
+    ":repository:core",
     ":screen:main",
     ":screen:project",
-    ":di",
+    ":core:coroutines",
+    ":core:di",
     ":db"
 )

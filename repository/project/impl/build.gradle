@@ -10,7 +10,9 @@ android {
 
 dependencies {
     api project(path: ':repository:project:api')
+    implementation project(path: ':core:coroutines')
     implementation project(path: ':db')
+    implementation project(path: ':repository:core')
 
     implementation libs.coroutines
 

@@ -40,7 +40,9 @@ dependencies {
     implementation project(path: ':screen:main')
     implementation project(path: ':screen:project')
     implementation project(path: ':repository:project:impl')
-    implementation project(path: ':di')
+    implementation project(path: ':repository:core')
+    implementation project(path: ':core:di')
+    implementation project(path: ':core:coroutines')
     implementation project(path: ':db')
 
     implementation libs.dagger

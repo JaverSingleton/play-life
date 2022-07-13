@@ -12,6 +12,6 @@ import androidx.room.Database as DatabaseAnnotation
         ProjectDto::class,
         ScoreDto::class,
     ],
-    version = 2
+    version = 3
 )
 abstract class RoomDatabaseImpl : RoomDatabase(), Database

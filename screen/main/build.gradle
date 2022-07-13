@@ -17,7 +17,7 @@ android {
 
 dependencies {
     implementation project(path: ':db')
-    implementation project(path: ':di')
+    implementation project(path: ':core:di')
 
     implementation libs.bundles.room
     kapt libs.room.compiler
